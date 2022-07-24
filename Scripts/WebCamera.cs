@@ -8,6 +8,8 @@ public class WebCamera : MonoBehaviour
 
     private static int FPS = 60;
 
+    public int selectCameraIndex;
+
     // UI
     RawImage rawImage;
     WebCamTexture webCamTexture;
@@ -29,7 +31,7 @@ public class WebCamera : MonoBehaviour
     }
 
     // カメラの選択
-    int selectCamera = 4;
+    int selectCamera = 0;
 
     // カメラの変更
     public void ChangeCamera()
@@ -42,7 +44,7 @@ public class WebCamera : MonoBehaviour
 
         // カメラの切り替え
         selectCamera++;
-        if (selectCamera >= webCamDevices.Length) selectCamera = 0;
+        if (selectCamera >= webCamDevices.Length) selectCamera = selectCameraIndex;
         this.webCamTexture.Stop();
         this.webCamTexture = new WebCamTexture(webCamDevices[selectCamera].name,
             width, height, FPS);
