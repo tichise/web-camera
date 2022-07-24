@@ -1,0 +1,16 @@
+{
+  "name": "tokyo.tichise.web-camera",
+  "displayName": "Web Camera",
+  "version": "1.0.0",
+  "unity": "2020.3",
+  "description": "",
+  "author": {
+      "name": "tichise",
+      "url": "https://github.com/tichise"
+  },
+  "keywords": [
+      "debug"
+  ],
+  "dependencies": {
+  }
+}
